@@ -1,0 +1,88 @@
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+}
+header .wrap {
+  height: 100%;
+  padding: 0 3%;
+  justify-content: space-between;
+}
+header .wrap h1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .wrap h1 a {
+  font-size: 0;
+  z-index: 1;
+}
+header .wrap h1 a::after{
+  content: "";
+  background-image: url(../img/img_logo_black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+  width: 175px;
+  height: 50px;
+  display: block;
+}
+header .wrap nav {
+  
+}
+header .wrap nav ul {
+  height: 100%;
+}
+header .wrap nav ul::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0px;
+  background-color: white;
+  opacity: 0;
+  transition: 0.5s;
+}
+header .wrap nav ul:hover::before{
+  opacity: 0.8;
+  height: 200px;
+}
+header .wrap nav ul li {
+  height: 100%;
+  z-index: 1;
+}
+header .wrap nav ul li a {
+  padding: 0 40px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+}
+header .wrap nav ul li a:hover{
+  border-bottom: 0.5px solid #333;
+  box-sizing: border-box;
+}
+header .wrap p.log {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .wrap p.log a {
+  font-size: 0;
+  z-index: 1;
+}
+header .wrap p.log a::after{
+  content: "";
+  background-image: url(../img/ico_login_black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+  width: 28px;
+  height: 28px;
+  display: block;
+}

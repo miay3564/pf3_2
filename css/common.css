@@ -1,0 +1,30 @@
+body{  
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.wrap{
+  margin: 0px auto;
+  padding: 5% 13%;
+}
+.flex{
+  display: flex;
+}
+.block{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.stb{
+  font-weight: bold;
+}
+.h2t{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 2.5;
+}
+.pt{
+  font-size: 20px;
+}
