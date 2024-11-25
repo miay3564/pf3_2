@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ham.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main-slick.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
 <!-- 구글폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-     <script>
+    <script>
         $(document).ready(function(){
             $('.brand').slick({
                 infinite: true,
@@ -30,25 +32,52 @@
                 dots: true,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                speed: 2000
+                speed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 769, // 화면이 768px 이하일 때
+                        settings: {
+                            slidesToShow: 1, // 한 번에 하나만 표시
+                        },
+                    },
+                ],
             });
         });
-     </script>
+    </script>
 </head>
 <body>
     <header>
         <div class="wrap flex">
             <h1><a href="">교보생명 이노스테이지</a></h1>
             <nav>
-                <ul class="flex">
-                    <li><a href="">INNOSTAGE</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Apply</a></li>
+                <ul class="flex gnb">
+                    <li>
+                        <a href="">INNOSTAGE</a>
+                        <ul class="sub">
+                            <li><a href="">이노스테이지 소개</a></li>
+                            <li><a href="">지원 활동</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Portfolio</a>
+                        <ul class="sub">
+                            <li><a href="">이노스테이지 활동</a></li>
+                            <li><a href="">기업 탐색하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Apply</a>
+                        <ul class="sub">
+                            <li><a href="">지원 프로그램</a></li>
+                            <li><a href="">협업 제안</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">News</a></li>
                     <li><a href="">Community</a></li>
                 </ul>
             </nav>
             <p class="log"><a href="">login</a></p>
+            <a href="" class="ham">메뉴보기</a>
         </div>
     </header>
     <div id="title">
@@ -313,7 +342,9 @@
             <div class="wrap">
                 <div class="text">
                     <div class="top flex">
-                        <p class="t">교보생명 이노스테이지는</p>
+                        <p class="t">
+                            교보생명 이노스테이지는
+                        </p>
                         <ul>
                             <li>금융</li>
                             <li>인공지능</li>
@@ -321,7 +352,7 @@
                             <li>헬스케어</li>
                             <li>교육</li>
                             <li>문화콘텐츠</li>
-                        </ul>
+                          </ul>
                     </div>
                     <p class="c">스타트업과의 다양한 협업을<span class="block"></span>기다리고 있습니다.</p>
                     <p class="cc"><a href="" class="block">협업 제안하기</a></p>

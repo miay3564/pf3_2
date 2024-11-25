@@ -32,10 +32,10 @@ header .wrap h1 a::after{
 header .wrap nav {
   
 }
-header .wrap nav ul {
+header .wrap nav ul.gnb {
   height: 100%;
 }
-header .wrap nav ul::before{
+header .wrap nav ul.gnb::before{
   content: "";
   display: block;
   position: absolute;
@@ -47,25 +47,56 @@ header .wrap nav ul::before{
   opacity: 0;
   transition: 0.5s;
 }
-header .wrap nav ul:hover::before{
+header .wrap nav ul.gnb:hover::before{
   opacity: 0.8;
-  height: 200px;
+  height: 195px;
 }
-header .wrap nav ul li {
+header .wrap nav ul.gnb li {
   height: 100%;
   z-index: 1;
 }
-header .wrap nav ul li a {
+header .wrap nav > ul.gnb > li > a {
   padding: 0 40px;
   height: 100%;
   align-items: center;
   display: flex;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
 }
-header .wrap nav ul li a:hover{
-  border-bottom: 0.5px solid #333;
-  box-sizing: border-box;
+header .wrap nav > ul.gnb > li > a::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s;
+}
+header .wrap nav > ul.gnb > li:hover > a::after{
+  transform: scale(1, 1);
+}
+header .wrap nav ul.gnb li ul.sub{
+  display: none;
+  transition: 0.5s;
+}
+header .wrap nav ul.gnb li:hover ul.sub{
+  display: block;
+}
+header .wrap nav ul.gnb li ul.sub li{
+  padding-top: 10px;
+}
+header .wrap nav ul.gnb li ul.sub li a{
+  display: block;
+  text-align: center;
+  line-height: 3;
+  font-size: 16px;
+}
+header .wrap nav ul.gnb li ul.sub li a:hover{
+  color: #5dc591;
 }
 header .wrap p.log {
   height: 100%;

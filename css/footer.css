@@ -30,8 +30,7 @@ footer .wrap h2{
   font-size: 0;
   justify-self: end;
 }
-footer .wrap h2::before{
-  
+footer .wrap h2::before{ 
   content: "";
   background-image: url(../img/img_logo_footer.svg);
   background-position: center;

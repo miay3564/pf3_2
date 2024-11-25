@@ -195,10 +195,12 @@ main{
   color: rgba(255, 255, 255, .8);
   line-height: 1.5;
   font-size: 20px;
+  position: relative;
+}
+#main2 > .wrap ul li h3::before{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
 }
 #main2 > .wrap ul li:nth-child(1) h3::before{
   content: "";
@@ -539,12 +541,16 @@ main{
   padding-left: 8px;
   color: #5dc591;
   animation-name: rollingtext;
-  animation-duration: 7s;
-  animation-delay: 1s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
 @keyframes rollingtext {
   0% {
+    transform: translateY(0);
+  }
+  5%{
     transform: translateY(0);
   }
   20% {
@@ -578,6 +584,7 @@ main{
   padding: 15px 30px;
   color: white;
   font-weight: 600;
+  border-radius: 16px;
 }
 #main5 .wrap .text p.cc a::after{
   content: ">";
